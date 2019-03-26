@@ -9,7 +9,7 @@ When setting these options, there are three cases:
 
 1. All server options will be set to default values ​​when users do not provided server options.
 
-2. When the server options are provided by user but these values are invalid, the default values are used and a warn is added in log.
+2. When the server options are provided by user but these values are invalid, the default values are used and a warning is added in log.
  
     Invalid situations are as follows:
     * ioThreads <= 0
