@@ -1,9 +1,12 @@
 
-# Logging
+## Summary
 
 Logging is a module in Light-4j framework which will use to get the loggers and their current logging levels, And also can able to
 change the logging level for given logger at runtime (Example: Change logging level to DEBUG for “com.networknt” logger for troubleshooting purpose).
 
+### Motivation
+
+### Guide-level explanation
 There are three LoggerHandlers available in logging module.
  
  * LoggerGetHandler : This handler will provide the current logging level for given logger.
@@ -84,3 +87,14 @@ By default logging is enabled in logging.yml. if you want to disable it,
 just add the logging.yml file in your resource folder and make enabled property to false in logging.yml.
 
 
+
+### Reference-level explanation
+
+
+### Drawbacks
+
+
+### Rationale and Alternatives
+
+
+### Unresolved questions
