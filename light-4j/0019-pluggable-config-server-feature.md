@@ -4,10 +4,10 @@ Make current config server functionality as pluggable features so that clients c
 ### Motivation
 To open up light-4j so that clients can use their own config server implementation if required. 
 
-A new ConfigServerStartupHookProvider can be created and current config server related code can be moved there. And then Server class will just call this code in start method when it triggers all the startup hook providers. This way, clients can write their own ConfigServerStartupHookProvider and override current implementation.
+A new DefaultConfigLoader can be created and current config server related code can be moved there. Clients can mention this loader class (or their own class) in startup.yml file. And then Server will just locate, instantiate & call this DefaultConfigLoader. This way, clients can write their own ConfigLoader and override current implementation.
 
 ### Guide-level explanation
-To use the new ConfigServerStartupHookProvider, it should be added to service.yml file as singleton so that singleton factory can keep its ready before Server can trigger its onStartup method. 
+To use the new ConfigLoader, it should be added to startup.yml so that Server can locate & trigger its init() method. The startup.yml file will host all the static/parmanent key/value pairs which are not supposed to changed dynamically.  
 
 ### Reference-level explanation
 
